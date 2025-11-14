@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>marcoalexismaria</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- Floating top-right logo -->
+  <div class="top-corner-title">
+    <p>Marco Maria</p>
+  </div>
+
+  <!-- Sidebar with links -->
+  <div class="header">
+    <div class="links">
+      <a href="videos.html">Videos</a>
+      <a href="music.html">Music</a>
+      <a href="photos.html" class="background-link">Photographs</a>
+      <a href="events.html">Events</a>
+      <a href="https://www.instagram.com/perfectlycraftedmusic/" target="_blank">Instagram</a>
+      <a href="https://tumblr.com/blog/marcoalexismaria" target="_blank">Tumblr</a>
+      <a href="mailto:perfectlycraftedmusic@gmail.com">Email</a>
+      <a href="background.html" class="background-link">Background</a>
+    </div>
+  </div>
+
+  <!-- Image gallery to the right side -->
+  <div class="main-content">
+    <div class="gallery-row">
+      <a href="photos.html#img1"><img src="IMG_1.jpg" alt="Image 1" /></a>
+      <a href="photos.html#img2"><img src="IMG_2.jpg" alt="Image 2" /></a>
+      <a href="photos.html#img3"><img src="IMG_3.jpg" alt="Image 3" /></a>
+      <a href="photos.html#img4"><img src="IMG_4.jpg" alt="Image 4" /></a>
+      <a href="photos.html#img5"><img src="IMG_5.jpg" alt="Image 5" /></a>
+      <a href="photos.html#img6"><img src="IMG_6.jpg" alt="Image 6" /></a>
+      <a href="photos.html#img7"><img src="IMG_7.jpg" alt="Image 7" /></a>
+      <a href="photos.html#img8"><img src="IMG_8.jpg" alt="Image 8" /></a>
+      <a href="photos.html#img9"><img src="IMG_9.jpg" alt="Image 9" /></a>
+      <a href="photos.html#img10"><img src="IMG_10.jpg" alt="Image 10" /></a>
+      <a href="photos.html#img11"><img src="IMG_11.jpg" alt="Image 11" /></a>
+      <a href="photos.html#img12"><img src="IMG_12.jpg" alt="Image 12" /></a>
+      <a href="photos.html#img13"><img src="IMG_13.jpg" alt="Image 13" /></a>
+      <a href="photos.html#img14"><img src="IMG_14.jpg" alt="Image 14" /></a>
+      <a href="photos.html#img15"><img src="IMG_15.jpg" alt="Image 15" /></a>
+      <a href="photos.html#img16"><img src="IMG_16.jpg" alt="Image 16" /></a>
+      <a href="videos.html" class="video-thumb">
+      <img src="img_02.png" alt="ANG3L — Official Video" loading="lazy" />
+      <a href="videos.html" class="video-thumb">
+      <img src="img_01.png" alt="ED-EMY — Official Video" loading="lazy" />
+      <a href="videos.html" class="video-thumb">
+      <img src="img_03.png" alt="TAPED" loading="lazy" />
+</a>
+
+    </div>
+  </div>
+
+  <!-- Footer logo at bottom -->
+  <footer class="footer">
+    <a href="secret.html">
+      <img src="PM LOGO copy 4.png" alt="PM Logo" />
+    </a>
+  </footer>
+
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+    const gallery = document.querySelector(".gallery-row");
+    const items = Array.from(gallery.children);
+
+    // Fisher–Yates shuffle
+    for (let i = items.length - 1; i > 0; i--) {
+      const j = Math.floor(Math.random() * (i + 1));
+      [items[i], items[j]] = [items[j], items[i]];
+    }
+
+    // Append back in shuffled order
+    items.forEach(item => gallery.appendChild(item));
+  });
+</script>
+
+</body>
+</html>
